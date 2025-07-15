@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIXIES Pharmaceuticals - Your Trusted Healthcare Partner</title>
+  <meta name="description" content="Premium pharmaceutical products with guaranteed quality and safety. Your trusted partner in healthcare solutions.">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="/placeholder.svg?height=32&width=32" type="image/svg+xml">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#home">
+              <div class="brand-icon me-2">
+                  <span class="brand-logo">NP</span>
+              </div>
+              <span class="brand-text">NIXIES Pharmaceuticals</span>
+          </a>
+
+          <div class="d-flex align-items-center order-lg-3">
+              <!-- Dark Mode Toggle -->
+              <button class="btn btn-outline-primary me-3 theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                  <i class="fas fa-moon" id="themeIcon"></i>
+              </button>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+
+          <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#products">Products</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+      <div class="container">
+          <div class="row align-items-center min-vh-100">
+              <div class="col-lg-6" data-aos="fade-right">
+                  <div class="hero-content">
+                      <span class="badge bg-primary-light text-primary mb-3">Trusted Healthcare Partner</span>
+                      <h1 class="hero-title">
+                          Your Health, Our 
+                          <span class="gradient-text">Priority</span>
+                      </h1>
+                      <p class="hero-description">
+                          Discover premium pharmaceutical products with guaranteed quality and safety. 
+                          Your trusted partner in healthcare solutions.
+                      </p>
+                      <div class="hero-buttons">
+                          <button class="btn btn-gradient btn-lg me-3" id="exploreProductsBtn">
+                              Explore Products
+                              <i class="fas fa-arrow-right ms-2"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-lg" id="learnMoreBtn">Learn More</button>
+                      </div>
+                      <div class="hero-stats row mt-5">
+                          <div class="col-4 text-center">
+                              <div class="stat-number text-primary">39</div>
+                              <div class="stat-label">Products</div>
+                          </div>
+                          <div class="col-4 text-center">
+                              <div class="stat-number text-success">15+</div>
+                              <div class="stat-label">Years Experience</div>
+                          </div>
+                          <div class="col-4 text-center">
+                              <div class="stat-number text-info">99%</div>
+                              <div class="stat-label">Customer Satisfaction</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left">
+                  <div class="hero-image">
+                      <div class="image-bg"></div>
+                      <img src="images\Main.png" 
+                           alt="Professional doctor with arms crossed in white coat" class="img-fluid rounded-4 shadow-lg">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section id="products" class="py-5 bg-light-custom">
+      <div class="container">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <h2 class="section-title">Product Categories</h2>
+              <p class="section-subtitle">
+                  Explore our comprehensive range of pharmaceutical products designed to meet your healthcare needs
+              </p>
+          </div>
+
+          <!-- Enhanced Search Bar -->
+          <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-8">
+                  <div class="search-container-enhanced">
+                      <div class="search-wrapper">
+                          <i class="fas fa-search search-icon"></i>
+                          <input type="text" class="form-control search-input-enhanced" id="productSearch" 
+                                 placeholder="Search medicines, brands, or categories...">
+                          <button class="search-btn" id="searchBtn" aria-label="Search">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </div>
+                      <div class="search-suggestions" id="searchSuggestions"></div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Enhanced Category Filter Tabs -->
+          <div class="category-tabs-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="category-tabs">
+                  <button class="category-tab active" data-category="all">
+                      <i class="fas fa-th-large"></i>
+                      <div class="category-name">All Products</div>
+                      <div class="category-description">Complete catalog</div>
+                      <span class="category-count" id="count-all">39</span>
+                  </button>
+                  <button class="category-tab" data-category="tablet">
+                      <i class="fas fa-pills"></i>
+                      <div class="category-name">Tablets</div>
+                      <div class="category-description">Oral medications</div>
+                      <span class="category-count" id="count-tablet">17</span>
+                  </button>
+                  <button class="category-tab" data-category="syrup">
+                      <i class="fas fa-flask"></i>
+                      <div class="category-name">Syrups</div>
+                      <div class="category-description">Liquid medicines</div>
+                      <span class="category-count" id="count-syrup">14</span>
+                  </button>
+                  <button class="category-tab" data-category="drops">
+                      <i class="fas fa-eye-dropper"></i>
+                      <div class="category-name">Drops</div>
+                      <div class="category-description">Targeted solutions</div>
+                      <span class="category-count" id="count-drops">4</span>
+                  </button>
+                  <button class="category-tab" data-category="injection">
+                      <i class="fas fa-syringe"></i>
+                      <div class="category-name">Injections</div>
+                      <div class="category-description">Injectable drugs</div>
+                      <span class="category-count" id="count-injection">1</span>
+                  </button>
+                  <button class="category-tab" data-category="other">
+                      <i class="fas fa-plus-circle"></i>
+                      <div class="category-name">Others</div>
+                      <div class="category-description">Medical devices</div>
+                      <span class="category-count" id="count-other">3</span>
+                  </button>
+              </div>
+          </div>
+
+          <!-- Sort and Filter Controls -->
+          <div class="filter-controls mb-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="filter-row">
+                  <div class="results-info">
+                      <span id="resultsCount">39</span> products found
+                  </div>
+                  <div class="filter-actions">
+                      <div class="view-toggle">
+                          <button class="view-btn active" data-view="grid" title="Grid View">
+                              <i class="fas fa-th"></i>
+                          </button>
+                      </div>
+                      <div class="sort-controls">
+                          <label for="sortSelect" class="form-label me-2">Sort by:</label>
+                          <select class="form-select" id="sortSelect">
+                              <option value="name">Name (A-Z)</option>
+                              <option value="price-low">Price (Low to High)</option>
+                              <option value="price-high">Price (High to Low)</option>
+                              <option value="popular">Most Popular</option>
+                              <option value="newest">Newest First</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products-grid" id="productGrid" data-aos="fade-up" data-aos-delay="400">
+              <!-- Products will be loaded by JavaScript -->
+          </div>
+
+          <!-- Load More Button with Pagination Info -->
+          <div class="pagination-container" id="loadMoreContainer" style="display: none;">
+              <div class="pagination-info">
+                  <span id="showingCount">12</span> of <span id="totalCount">39</span> products
+              </div>
+              <button class="load-more-btn" id="loadMoreBtn">
+                  <i class="fas fa-plus me-2"></i>
+                  Load More Products
+              </button>
+          </div>
+      </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+      <div class="container">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <h2 class="section-title">About NIXIES Pharmaceuticals</h2>
+              <p class="section-subtitle">
+                  With over 15 years of experience in the pharmaceutical industry, we are committed to providing 
+                  high-quality healthcare solutions that improve lives worldwide.
+              </p>
+          </div>
+
+          <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-4 mb-4">
+                  <div class="feature-card text-center">
+                      <div class="feature-icon bg-primary">
+                          <i class="fas fa-shield-alt"></i>
+                      </div>
+                      <h4 class="feature-title">Quality Assurance</h4>
+                      <p class="feature-description">
+                          All our products undergo rigorous testing and quality control measures to ensure safety and efficacy.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                  <div class="feature-card text-center">
+                      <div class="feature-icon bg-success">
+                          <i class="fas fa-award"></i>
+                      </div>
+                      <h4 class="feature-title">Certified Excellence</h4>
+                      <p class="feature-description">
+                          FDA approved and ISO certified manufacturing processes ensure the highest standards.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                  <div class="feature-card text-center">
+                      <div class="feature-icon bg-info">
+                          <i class="fas fa-users"></i>
+                      </div>
+                      <h4 class="feature-title">Expert Team</h4>
+                      <p class="feature-description">
+                          Our team of experienced pharmacists and healthcare professionals guide every decision.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Company Stats -->
+          <div class="stats-section" data-aos="fade-up" data-aos-delay="200">
+              <div class="row text-center">
+                  <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="stat-item">
+                          <div class="stat-number text-primary" data-count="39">0</div>
+                          <div class="stat-label">Products Available</div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="stat-item">
+                          <div class="stat-number text-success" data-count="25">0</div>
+                          <div class="stat-label">Countries Served</div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="stat-item">
+                          <div class="stat-number text-info" data-count="10">0</div>
+                          <div class="stat-label">Million Patients</div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="stat-item">
+                          <div class="stat-number text-warning" data-count="99">0</div>
+                          <div class="stat-label">Quality Rating</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light-custom">
+      <div class="container">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <h2 class="section-title">Get In Touch</h2>
+              <p class="section-subtitle">
+                  Have questions about our products or need assistance? We're here to help you with all your healthcare needs.
+              </p>
+          </div>
+
+          <div class="row">
+              <div class="col-lg-8 mb-5" data-aos="fade-right">
+                  <div class="contact-form-container">
+                      <form id="contactForm" class="contact-form">
+                          <div class="row">
+                              <div class="col-md-6 mb-3">
+                                  <label for="name" class="form-label">Full Name *</label>
+                                  <input type="text" class="form-control" id="name" required>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <label for="email" class="form-label">Email Address *</label>
+                                  <input type="email" class="form-control" id="email" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6 mb-3">
+                                  <label for="phone" class="form-label">Phone Number</label>
+                                  <input type="tel" class="form-control" id="phone">
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <label for="subject" class="form-label">Subject *</label>
+                                  <select class="form-select" id="subject" required>
+                                      <option value="">Select a subject</option>
+                                      <option value="general">General Inquiry</option>
+                                      <option value="product">Product Information</option>
+                                      <option value="support">Technical Support</option>
+                                      <option value="partnership">Partnership</option>
+                                      <option value="complaint">Complaint</option>
+                                      <option value="other">Other</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="message" class="form-label">Message *</label>
+                              <textarea class="form-control" id="message" rows="5" required 
+                                        placeholder="Please describe how we can help you..."></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-gradient btn-lg">
+                              <i class="fas fa-paper-plane me-2"></i>
+                              Send Message
+                          </button>
+                      </form>
+                  </div>
+              </div>
+
+              <div class="col-lg-4" data-aos="fade-left">
+                  <div class="contact-info">
+                      <div class="contact-item mb-4">
+                          <div class="contact-icon bg-primary">
+                              <i class="fas fa-map-marker-alt"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h5>Address</h5>
+                              <p>123 Healthcare Avenue<br>Medical District, NY 10001<br>United States</p>
+                          </div>
+                      </div>
+
+                      <div class="contact-item mb-4">
+                          <div class="contact-icon bg-success">
+                              <i class="fas fa-phone"></i>
+                          </div>
+                          <div class="contact-details">
+                              <h5>Phone</h5>
+                              <p>+1 (555) 123-4567<br>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                      </div>
+                  </div>
+
+                  <div class="contact-item mb-4">
+                      <div class="contact-icon bg-info">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="contact-details">
+                          <h5>Email</h5>
+                          <p>info@nixiespharm.com<br>support@nixiespharm.com</p>
+                      </div>
+                  </div>
+
+                  <!-- Map -->
+                  <div class="map-container mt-4">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878459418!3d40.74844097932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1635959542207!5m2!1sen!2sus" 
+                              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Google Map of NIXIES Pharmaceuticals location"></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 mb-4">
+                  <div class="footer-brand mb-3">
+                      <div class="brand-icon me-2">
+                          <span class="brand-logo">NP</span>
+                      </div>
+                      <span class="brand-text">NIXIES Pharmaceuticals</span>
+                  </div>
+                  <p class="footer-description">
+                      Your trusted partner in healthcare solutions, committed to improving lives through 
+                      quality pharmaceutical products.
+                  </p>
+                  <div class="social-links">
+                      <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="footer-title">Quick Links</h5>
+                  <ul class="footer-links">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#products">Products</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="footer-title">Products</h5>
+                  <ul class="footer-links">
+                      <li><a href="#" data-category="tablet">Tablets</a></li>
+                      <li><a href="#" data-category="syrup">Syrups</a></li>
+                      <li><a href="#" data-category="drops">Drops</a></li>
+                      <li><a href="#" data-category="other">Others</a></li>
+                      <li><a href="#" data-category="injection">Injections</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="footer-title">Legal</h5>
+                  <ul class="footer-links">
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Disclaimer</a></li>
+                      <li><a href="#">Certifications</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5 class="footer-title">Support</h5>
+                  <ul class="footer-links">
+                      <li><a href="#">Help Center</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Live Chat</a></li>
+                      <li><a href="#">Emergency</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <hr class="footer-divider">
+
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <p class="footer-copyright mb-0">
+                      &copy; 2024 NIXIES Pharmaceuticals. All rights reserved. | Designed with care for your health.
+                  </p>
+              </div>
+              <div class="col-md-6 text-md-end">
+                  <div class="footer-certifications">
+                      <span class="certification-badge">FDA Approved</span>
+                      <span class="certification-badge">ISO Certified</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Placeholder for L-ImageTooltip__colorBtn - add this where relevant in your HTML -->
+  <button class="L-ImageTooltip__colorBtn" style="display: none;" aria-label="Select color">
+    <!-- Your button content, e.g., a color swatch or icon -->
+    <span class="sr-only">Color selection button</span>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Custom JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+</body>
+</html>

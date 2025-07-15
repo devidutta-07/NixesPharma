@@ -1,0 +1,165 @@
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .category-tabs {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .category-tab {
+    padding: 20px 16px;
+  }
+
+  .category-tab i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container-enhanced {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  .category-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-tab {
+    padding: 18px 12px;
+  }
+
+  .category-tab i {
+    font-size: 1.8rem;
+  }
+
+  .category-tab .category-name {
+    font-size: 0.9rem;
+  }
+
+  .category-tab .category-description {
+    font-size: 0.75rem;
+  }
+
+  .filter-controls {
+    padding: 20px;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .filter-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .sort-controls {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .sort-controls .form-select {
+    min-width: auto;
+    flex: 1;
+  }
+
+  /* Responsive Grid View for smaller screens */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for 2 columns on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .category-tabs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .category-tab {
+    padding: 16px;
+    flex-direction: row;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .category-tab i {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .category-tab .category-info {
+    flex: 1;
+  }
+
+  .search-input-enhanced {
+    padding: 16px 20px 16px 45px;
+    font-size: 0.95rem;
+  }
+
+  .search-btn {
+    padding: 16px 20px;
+  }
+
+  .view-toggle {
+    order: 2;
+  }
+
+  .sort-controls {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Responsive Grid View for mobile */
+  .products-grid {
+    grid-template-columns: 1fr; /* Single column on small mobile */
+  }
+}
+
+/* Loading animation for category tabs */
+@keyframes categoryPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.category-tab.loading {
+  animation: categoryPulse 1.5s ease-in-out infinite;
+}
+
+/* Smooth category transitions */
+.category-tabs {
+  transition: all 0.3s ease;
+}
+
+.category-tab {
+  will-change: transform;
+}
+
+/* Enhanced search suggestions with better positioning */
+.search-suggestions {
+  position: fixed;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Better mobile search suggestions */
+@media (max-width: 768px) {
+  .search-suggestions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+  }
+}
