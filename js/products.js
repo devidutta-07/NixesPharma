@@ -3,143 +3,233 @@ const products = [
   // Tablets (01-30 products)
   {
     id: 1,
-    name: "Montix-L Tablet",
+    name: "Care-200",
     category: "tablet",
-    price: 12.99,
-    image: "images/Tablets/Montix-L.png",
-    description: "Antihistaminic Antileukotrienic",
+    image: "images/Tablets/Care-200.webp",
+    description: "fluconazole 200mg/400mg tablets for fungal and candida infections, 5-10x more potent than ketoconazole."
   },
   {
     id: 2,
-    name: "Montix-LKid Tablet",
+    name: "Iten-200",
     category: "tablet",
-    price: 15.5,
-    image: "images/Tablets/Montix-LKid.png",
-    description: "Anti-inflammatory pain reliever for muscle and joint pain",
+    image: "images/Tablets/Iten-200.webp",
+    description: "Itraconazole 200mg for complete eradication of tough fungal infections"
   },
   {
     id: 3,
-    name: "Care-200",
+    name: "Montix-L Tablet",
     category: "tablet",
-    price: 8.99,
-    image: "images/Tablets/Care-200.png",
-    description: "Heart health and pain relief medication",
+    image: "images/Tablets/Montix-L.webp",
+    description: "montelukast 10mg + levocetirizine 5mg tablets for allergic rhinitis and asthma management."
   },
   {
     id: 4,
-    name: "Iten-200",
+    name: "Montix-L (Kid) Tablet",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/Iten-200.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/Montix-LKid.webp",
+    description: "Montelukast 5 mg + Levocetirizine 2.5 mg for pediatric allergic rhinitis and asthma.",
   },
   {
     id: 5,
     name: "Nixclav-625",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/Nixclav-625.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/Nixclav-625.webp",
+    description: "amoxicillin 500mg + clavulanic acid 125mg tablets for broad-spectrum bacterial infections."
   },
   {
     id: 6,
-    name: "Nixpod-CV",
+    name: "Nixpod-200",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/Nixpod-CV.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/Nixpod-200.webp",
+    description: "cefpodoxime 200mg tablets for respiratory, urinary, and skin infections, with efficacy comparable to parenteral therapy."
   },
   {
     id: 7,
-    name: "XIM-O 100mg",
+    name: "Nixpod-CV-200mg",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/XIM-100.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/Nixpod-CV.webp",
+    description: "cefpodoxime 200mg + clavulanate 125mg tablets for broad-spectrum infections including beta-lactamase resistant strains."
   },
   {
     id: 8,
-    name: "XIM-O 200mg",
+    name: "Rabinx-DSR",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/XIM-200.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/Rabinx-DSR.webp",
+    description: "rabeprazole 20mg + domperidone 30mg (IR 10mg & SR 20mg) capsules for GERD, gastric ulcers, and nausea/vomiting control."
   },
   {
     id: 9,
+    name: "Rabnix-LS",
+    category: "tablet",
+    image: "images/Tablets/Rabnix-LS.webp",
+    description: "Rabeprrazole 20mg + Levosulpiride 75mg to keep gastric acid settled down"
+  },
+  {
+    id: 10,
+    name: "Seranx-D",
+    category: "tablet",
+    image: "images/Tablets/Seranx-D.webp",
+    description: "diclofenac potassium 50mg + serratiopeptidase 10mg tablets for inflammatory pain and edema control."
+  },
+  {
+    id: 11,
+    name: "XIM-O 100mg",
+    category: "tablet",
+    image: "images/Tablets/XIM-100.webp",
+    description: "cefixime 100mg + ofloxacin 100mg dispersible tablets for MDR typhoid and urinary/respiratory infections."
+  },
+  {
+    id: 12,
     name: "XIM-O 200mg",
     category: "tablet",
-    price: 19.99,
-    image: "images/Tablets/XIM-200.png",
-    description: "Essential vitamin D supplement for bone health",
+    image: "images/Tablets/XIM-200.webp",
+    description: "cefixime 200mg + ofloxacin 200mg tablets for MDR typhoid, respiratory, and urinary tract infections."
+  },
+  {
+    id: 13,
+    name: "Xturn (Tablet)",
+    category: "tablet",
+    image: "images/Tablets/Xturn_Tablet.webp",
+    description: "ferrous ascorbate 100mg + folic acid 1.5mg tablets for iron deficiency anemia and hemoglobin support."
   },
   // Syrups (31-60 products)
   {
     id: 31,
-    name: "MV-Syrup",
+    name: "Alkanix",
     category: "syrup",
-    price: 18.5,
-    image: "images/Syrups/MV_Syrup.png",
-    description: "Natural honey-based cough suppressant for all ages",
+    image: "images/Syrups/Alkanix.webp",
+    description: "disodium hydrogen citrate 1.38gm/5ml syrup for urinary alkalization and relief from burning micturition."
   },
   {
     id: 32,
-    name: "Paracetamol",
-    category: "syrup",
-    price: 22.0,
-    image: "images/Syrups/Paracetamol.png",
-    description: "Complete vitamin supplement for children and adults",
-  },
-  // {
-  //   id: 33,
-  //   name: "Anix-LS",
-  //   category: "syrup",
-  //   price: 16.75,
-  //   iimage: "images/Syrups/Anix-LS.png",
-  //   description: "Iron deficiency treatment with natural ingredients",
-  // },
-  {
-    id: 34,
     name: "Altaliv-CF",
     category: "syrup",
-    price: 14.25,
-    image: "images/Syrups/Altaliv-CF.png",
-    description: "Herbal digestive aid for better gut health",
+    image: "images/Syrups/Altaliv-CF.webp",
+    description: "herbal liver tonic syrup to improve liver function and protect against toxic/drug-induced damage."
   },
-  // {
-  //   id: 35,
-  //   name: "Alkanix",
-  //   category: "syrup",
-  //   price: 19.99,
-  //   iimage: "images/Syrups/Alkanix.png",
-  //   description: "Calcium supplement for growing children",
-  // },
+  {
+    id: 33,
+    name: "Anix-LS (junior)",
+    category: "syrup",
+    image: "images/Syrups/Anix-LS-junior.webp",
+    description: "levosalbutamol 0.5mg + ambroxol 15mg + guaifenesin 50mg/5ml syrup for pediatric cough and bronchial congestion."
+  },
+  {
+    id: 34,
+    name: "Anix-LS",
+    category: "syrup",
+    image: "images/Syrups/Anix-LS.webp",
+    description: "ambroxol 30mg + guaifenesin 50mg + levosalbutamol 1mg/5ml syrup for cough and bronchial congestion relief."
+  },
+  {
+    id: 35,
+    name: "Montix-L",
+    category: "syrup",
+    image: "images/Syrups/Montix-L.webp",
+    description: "montelukast 4mg + levocetirizine 2.5mg/5ml syrup for pediatric allergic rhinitis and asthma."
+  },
+  {
+    id: 36,
+    name: "MV-Syrup",
+    category: "syrup",
+    image: "images/Syrups/MV-Syrup.webp",
+    description: "multivitamin + antioxidant + natural herbs (jatamansi, ashwagandha, brahmi, sankhapushpi) syrup for energy, vitality, and stress relief."
+  },
+  {
+    id: 37,
+    name: "Nixclav-DS",
+    category: "syrup",
+    image: "images/Syrups/Nixclav-DS.webp",
+    description: "amoxycillin 400mg + clavulanic acid 57mg dry syrup for broad-spectrum bacterial infections."
+  },
+  {
+    id: 38,
+    name: "Nixpod",
+    category: "syrup",
+    image: "images/Syrups/Nixpod.webp",
+    description: "cefpodoxime 50mg/100mg dry syrup for respiratory, skin, and soft tissue infections."
+  },
+  {
+    id: 39,
+    name: "Paracetamol",
+    category: "syrup",
+    image: "images/Syrups/Paracetamol.webp",
+    description: "mefenamic acid (50mg/100mg) + paracetamol (125mg/250mg)/5ml syrup for fever and pain relief, available in regular and forte strengths."
+  },
+  {
+    id: 40,
+    name: "Polycold-AF",
+    category: "syrup",
+    image: "images/Syrups/Polycold-AF.webp",
+    description: "phenylephrine 5mg + sodium citrate 60mg + chlorpheniramine maleate 1mg + menthol 1mg per 5ml syrup for cold, cough and nasal congestion relief."
+  },
+  {
+    id: 41,
+    name: "Ulcinix-O",
+    category: "syrup",
+    image: "images/Syrups/Ulcinix-O.webp",
+    description: "aluminium hydroxide + magnesium hydroxide with oxetacaine antacid gel for gastric hyperacidity and pain relief."
+  },
+  {
+    id: 42,
+    name: "Xturn",
+    category: "syrup",
+    image: "images/Syrups/Xturn.webp",
+    description: "ferrous ascorbate 30mg + folic acid 550mcg per 5ml syrup for iron deficiency and anemia treatment."
+  },
+
   // Drops (61-80 products)
   {
     id: 61,
-    name: "Antibiotic Eye Drops",
+    name: "MV-Drop",
     category: "drops",
-    price: 16.75,
-    image: "images/Drops/Drop.jpg",
-    description: "Prescription antibiotic eye drops",
+    image: "images/Drops/MV-Drop.webp",
+    description: "pediatric multivitamin drops with vitamin d3 (400 iu) for immune support and child development."
+  },
+  {
+    id: 62,
+    name: "N-Quin",
+    category: "drops",
+    image: "images/Drops/N-Quin.webp",
+    description: "moxifloxacin 0.5% ophthalmic solution for bacterial conjunctivitis with high ocular tissue penetration."
+  },
+  {
+    id: 63,
+    name: "Polycold-AF",
+    category: "drops",
+    image: "images/Drops/Polycold-AF.webp",
+    description: "phenylephrine 2.5mg + cpm 1mg/1ml drops for relief from cold, cough, and nasal congestion in children."
+  },
+  {
+    id: 64,
+    name: "Ploycold",
+    category: "drops",
+    image: "images/Drops/Polycold.webp",
+    description: "phenylephrine 2.5mg + cpm 1mg/1ml drops for pediatric relief from cold and nasal congestion."
   },
   // Injection (81-100 product)
   {
     id: 81,
     name: "MV-Injection",
     category: "injection",
-    price: 25.0,
-    image: "images/Injection/MV_injection.png",
-    description: "Essential vitamin B12 supplement injection",
+    image: "images/Injection/MV_injection.webp",
+    description: "methylcobalamin 1500 mcg + pyridoxine hcl 100 mg + niacinamide 100 mg/2ml for nerve impairment and neural function support."
   },
   // Others (101->.. products)
   {
     id: 101,
-    name: "First Aid Kit",
+    name: "Anixpro",
     category: "other",
-    price: 35.99,
-    image: "images/Others/kit.jpg",
-    description: "Complete emergency medical kit for home and travel",
+    image: "images/Others/Anixpro.webp",
+    description: "protein powder fortified with dha & gla for muscle maintenance, immune support, and tissue repair."
+
+  },
+  {
+    id: 102,
+    name: "Dexo-Z",
+    category: "other",
+    image: "images/Others/Dexo-Z.webp",
+    description: "glucose-sucrose-zinc energy supplement for fatigue, dehydration, and convalescence support."
   },
 ]
 
