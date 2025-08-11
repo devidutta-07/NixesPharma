@@ -605,7 +605,7 @@ function createProductCard(product) {
 
   productCard.innerHTML = `
       <div class="product-image">
-          <img src="${product.image}" alt="${product.name}" loading="lazy" 
+          <img src="${product.image}" alt="${product.name}"
                width="300" height="300" 
                onerror="this.src='${fallbackImage}'">
           <div class="product-badge">${getCategoryDisplayName(product.category)}</div>
