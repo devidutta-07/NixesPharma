@@ -196,7 +196,7 @@ function initContactForm() {
       const mailtoSubject = encodeURIComponent(`Contact Form: ${subject}`)
       const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)
 
-      window.location.href = `mailto:info@nixiespharm.com?subject=${mailtoSubject}&body=${mailtoBody}`
+      window.location.href = `mailto:nixies.uk@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
       showToast("Email client opened! Please send the email to complete your request.", "success")
       contactForm.reset()
     })
