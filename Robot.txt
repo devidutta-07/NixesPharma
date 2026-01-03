@@ -1,0 +1,41 @@
+# robots.txt for Nixes Pharmaceuticals
+# Optimized for SEO - Allow all search engines to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.nixiespharma.com/sitemap.xml
+
+# Disallow admin areas (if applicable)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Allow important files for crawling
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Crawl Rate (Optional - helps with server load)
+Crawl-delay: 1
+
+# Major Search Engines (Specific Instructions)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional security)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
